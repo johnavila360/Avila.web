@@ -62,8 +62,8 @@ header {
 }
 
 .home-img img {
-    width: 100%;
-    height: auto;
+    width: 200px;
+    height: 200px;
     border-radius: 100px;
     border: solid black;
 }
