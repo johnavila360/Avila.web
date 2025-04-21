@@ -13,19 +13,6 @@ document.querySelectorAll('nav a').forEach(link => {
 });
 
 
-document.getElementById('contactForm').addEventListener('submit', function (e) {
-  e.preventDefault();
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const message = document.getElementById('message').value.trim();
-
-  if (name && email && message) {
-    alert(`Thanks, ${name}! I'll get back to you soon.`);
-    this.reset();
-  } else {
-    alert('Please fill out all fields.');
-  }
-});
 
 const fadeElements = document.querySelectorAll('.fade-in');
 
@@ -43,3 +30,26 @@ function handleScroll() {
 
 window.addEventListener('scroll', handleScroll);
 window.addEventListener('load', handleScroll); // trigger on load
+
+
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const name = this.Name.value.trim();
+  const email = this.email.value.trim();
+  const subject = this.subject.value.trim();
+  const message = this.message.value.trim();
+
+  if (!name || !email || !subject || !message) {
+    alert("Please fill out all fields.");
+    return;
+  }
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email)) {
+    alert("Invalid email address.");
+    return;
+  }
+
+  alert("Message sent successfully!");
+  this.reset();
+});
