@@ -118,18 +118,26 @@
   <div style="background-image: url('mov5.jpg');"></div>
 </div>  
   </section>
-  <section id="contact">
-    <h2>Contact Me</h2>    
-<p>contact mo lang pag ako na </p>
-    <form id="contactForm">
-      <input type="text" id="name" placeholder="Your Name" required />
-      <input type="email" id="email" placeholder="Your Email" required />
-      <textarea id="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
+<div class="container">
+    <div class="contact-info"id="contact">
+      <h1>Contact <span style="color: cyan;">Me</span></h1>
+      <p>Let's work together</p>
+      <p>I'm glad you've visited my personal profile website! If you have any questions, suggestions, or would like to collaborate, please feel free to contact me through this form.</p>
+      <p>I will endeavor to reply to your message as soon as possible.</p>
+      <p>Email: <a href="ja6203917@gmail.com" style="color: cyan;">ja6203917@gmail.com</a></p>
+      <p>Phone: <span style="color: cyan;">09513595278</span></p>
     </div>
-   </div> 
-  </section>
+
+    <div class="contact-form">
+      <form id="contactForm" novalidate>
+        <input type="text" placeholder="Enter Your Name" name="Name" required autocomplete="name" />
+        <input type="email" placeholder="Enter Your Email" name="email" required autocomplete="email" />
+        <input type="text" placeholder="Enter Your Subject" name="subject" required autocomplete="off" />
+        <textarea placeholder="Enter Your Message" name="message" rows="5" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
 
  <footer>
     <p>&copy; 2025 john Avila</p>
